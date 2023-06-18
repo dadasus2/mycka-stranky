@@ -27,6 +27,7 @@ body {
 .landPage {
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 
 .logo {
@@ -143,30 +144,135 @@ header .fas {
     filter: blur(375px);
 }
 
-.reservation {
-    background-image: url("images/carHero.png");
-    width: 100vw;
-    height: 100%;
-    background-size: contain;
-    background-origin: inherit;
-    background-position-x: 50%;
-    background-repeat: no-repeat;
-    position: relative;
-    top: -150px;
+.linear1 {
+    right: -700;
+    top: 1000;
+    width: 500;
+    height: 500;
+    position: absolute;
+    background: rgb(255, 135, 225);
+    opacity: 0.68;
+    filter: blur(375px);
 }
 
-.form {
+.heroPage {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.heroPage img {
+    width: 1500px;
+    height: 730px;
     position: absolute;
-    width: 80%;
-    height: 80px;
-    bottom: 0px;
     left: 50%;
     transform: translate(-50%);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    background: linear-gradient(153.47deg, rgba(255, 255, 255, 0) -341.94%, rgba(22, 22, 22, 0.2) 95.11%);
-    backdrop-filter: blur(3px);
-    z-index: 1000;
+    bottom: 100px;
+}
+
+.hero-text {
+    position: absolute;
+    left: 50%;
+    top: 24%;
+    transform: translate(-50%);
+    text-align: center;
+    width: 100%;
+
+}
+
+.hero-text h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px;
+}
+
+.hero-text p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: -10;
+}
+
+.hero-text button {
+    background: linear-gradient(153.47deg, rgba(105, 105, 105, 0.37) -341.94%, rgba(26, 26, 26, 0.53) 95.11%);
+    box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+    border-radius: 10px;
+    width: 179px;
+    height: 56px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+@media(max-width:1170px) {
+    .heroPage img {
+        width: 1200px;
+        height: 580px;
+    }
+
+    .hero-text {
+        top: 17%;
+    }
+
+    .hero-text h1 {
+        font-size: 70px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:800px) {
+    .heroPage img {
+        width: 900px;
+        height: 440px;
+    }
+
+    .hero-text {
+        width: 530px;
+    }
+
+    .hero-text h1 {
+        line-height: 70px;
+    }
+
+    .hero-text p {
+        margin-top: 20px;
+    }
+
+}
+
+@media(max-width:600px) {
+    .heroPage img {
+        width: 600px;
+        height: 280px;
+    }
+
+    .hero-text {
+        width: 400;
+        top: 10%;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .hero-text p {
+        font-size: 13px;
+        width: 300px;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .hero-text button {
+        width: 120px;
+        height: 50px;
+    }
 }
 
 .programs {
@@ -255,4 +361,36 @@ header .fas {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+}
+
+
+.outcome {
+    position: relative;
+    width: 1140px;
+    height: min-content;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100;
+}
+
+.outcome img {
+    width: 570px;
+    height: 304px;
+}
+
+
+
+.outcome-text h1 {
+    background: linear-gradient(135deg, #FF96F9 0%, #C32BAC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.outcome-dashes {
+    margin-top: 100px;
 }
