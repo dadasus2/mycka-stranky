@@ -27,7 +27,7 @@ body {
 .landPage {
     width: 100vw;
     height: 100vh;
-    position: relative;
+    z-index: 0;
 }
 
 .logo {
@@ -41,7 +41,7 @@ body {
     height: 80px;
     transition: .3s;
     position: relative;
-    z-index: 100000;
+    z-index: 10000000000000;
 }
 
 .menu li {
@@ -157,8 +157,9 @@ header .fas {
 
 .heroPage {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     position: relative;
+    z-index: 2;
 }
 
 .heroPage img {
@@ -177,7 +178,7 @@ header .fas {
     transform: translate(-50%);
     text-align: center;
     width: 100%;
-
+    z-index: 1000000000000000;
 }
 
 .hero-text h1 {
@@ -205,6 +206,7 @@ header .fas {
     outline: none;
     cursor: pointer;
     margin-top: 20px;
+    z-index: 9999999999999999999;
 }
 
 @media(max-width:1170px) {
@@ -246,33 +248,47 @@ header .fas {
 
 }
 
-@media(max-width:600px) {
+@media(max-width:750px) {
     .heroPage img {
-        width: 600px;
-        height: 280px;
+        display: none;
+    }
+
+    .landPage {
+        background-image: url("images/heroBG.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .hero-text {
-        width: 400;
-        top: 10%;
-    }
+        top: 20%;
+        transform: translate();
 
-    .hero-text h1 {
-        font-size: 40px;
-        line-height: 50px;
-    }
-
-    .hero-text p {
-        font-size: 13px;
-        width: 300px;
-        margin: auto;
-        margin-top: 10px;
     }
 
     .hero-text button {
-        width: 120px;
-        height: 50px;
+        border: 1px solid #C32BAC;
     }
+}
+
+@media(max-width:600px) {
+
+    .hero-text {
+        width: 400px;
+    }
+
+    .hero-text h1 {
+        font-size: 50px;
+        line-height: 50px;
+        width: 300px;
+        margin: auto;
+    }
+
+    .hero-text p {
+        width: 250;
+        margin: auto;
+        margin-top: 15px;
+    }
+
 }
 
 .programs {
