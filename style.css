@@ -277,9 +277,9 @@ header .fas {
     }
 
     .hero-text h1 {
-        font-size: 50px;
-        line-height: 50px;
-        width: 300px;
+        font-size: 60px;
+        line-height: 60px;
+        width: 350px;
         margin: auto;
     }
 
@@ -288,8 +288,8 @@ header .fas {
         margin: auto;
         margin-top: 15px;
     }
-
 }
+
 
 .programs {
     width: 1140px;
