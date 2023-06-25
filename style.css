@@ -20,8 +20,10 @@ body {
 html,
 body {
     width: 100%;
+    height: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
+
 }
 
 .landPage {
@@ -149,7 +151,18 @@ header .fas {
     top: 1000;
     width: 500;
     height: 500;
-    position: absolute;
+    position: fixed;
+    background: rgb(255, 135, 225);
+    opacity: 0.68;
+    filter: blur(375px);
+}
+
+.linear2 {
+    right: -700;
+    top: -500;
+    width: 500;
+    height: 500;
+    position: fixed;
     background: rgb(255, 135, 225);
     opacity: 0.68;
     filter: blur(375px);
@@ -429,15 +442,17 @@ header .fas {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 100;
+    align-items: center;
 }
 
 .outcome img {
     width: 570px;
     height: 304px;
+    margin-top: 50;
 }
 
 
+.outcome-text {}
 
 .outcome-text h1 {
     background: linear-gradient(135deg, #FF96F9 0%, #C32BAC 100%);
@@ -448,5 +463,69 @@ header .fas {
 }
 
 .outcome-dashes {
-    margin-top: 100px;
+    margin-top: 50px;
+
+}
+
+@media(max-width:1170px) {
+    .outcome {
+        top: -200px;
+        width: 1000px;
+    }
+
+    .outcome img {
+        transform: scale(0.8);
+    }
+}
+
+@media(max-width:950px) {
+    .outcome img {
+        margin-top: 20;
+    }
+
+    .outcome {
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+    .outcome-text {
+        text-align: center;
+    }
+
+    .outcome-dashes {
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:800px) {
+    .outcome {
+        top: 200;
+    }
+}
+
+@media(max-width:550px) {
+    .outcome {
+        margin: auto;
+        margin-top: 850;
+    }
+
+    .outcome h1 {
+        width: 70%;
+        text-align: left;
+    }
+
+    .outcome-dashes {
+        text-align: left;
+    }
+
+    .outcome img {
+        display: none;
+    }
+
+    .outcome-text {
+        position: relative;
+        left: 10%;
+
+    }
 }
