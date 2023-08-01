@@ -565,27 +565,99 @@ footer {
     }
 }
 
-.cursor {
+.reservation-wrapper {
     position: fixed;
-    width: 50px;
-    height: 50px;
-    border: 1px solid white;
-    border-radius: 100%;
-    left: 0;
-    top: 0;
-
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100000;
+    width: 1200px;
+    height: 500px;
+    background: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
 }
 
-.cursor2 {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    background: white;
-    border-radius: 50%;
-    left: 0;
-    top: 0;
-    transform: translate(-50%, -50%);
-    z-index: 100000;
+.reservation-wrapper h1 {
+    color: black;
+    font-size: 30px;
+}
+
+.reservation-wrapper h2 {
+    color: black;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+@media(max-width:1170px) {
+    .reservation-wrapper {
+        width: 900px;
+        height: 400px;
+    }
+
+    .reservation-wrapper h1 {
+        font-size: 25px;
+    }
+
+    .reservation-wrapper h2 {
+        font-size: 17px;
+    }
+}
+
+@media(max-width:800px) {
+    .reservation-wrapper {
+        width: 700px;
+        height: 400px;
+    }
+
+    .reservation-wrapper h1 {
+        font-size: 22px;
+    }
+
+    .reservation-wrapper h2 {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:700px) {
+    .reservation-wrapper {
+        width: 400px;
+        height: 500px;
+    }
+
+    .reservation-wrapper h1 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .reservation-wrapper h2 {
+        font-size: 15px;
+        width: 60%;
+    }
+}
+
+@media(max-width:600px) {
+    .reservation-wrapper {
+        width: 400px;
+        height: 500px;
+    }
+
+    .reservation-wrapper h1 {
+        font-size: 22px;
+        line-height: 30px;
+        margin: 0;
+        margin-bottom: 20;
+    }
+
+    .reservation-wrapper h2 {
+        font-size: 15px;
+        width: 60%;
+
+    }
+}
+
+#reservationClose {
+    border: none;
 }

@@ -12,9 +12,18 @@ closeMenu.addEventListener('click', () => {
     header.classList.remove('ztmav')
 })
 
-var cursor = document.querySelector('.cursor')
-var cursor2 = document.querySelector('.cursor2')
-document.addEventListener('mousemove', function (e) {
-    cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+const reservationButton = document.getElementById('reservation');
+const reservationWrapper = document.querySelector('.reservation-wrapper')
+const reservationClose = document.getElementById('reservationClose')
+
+reservationButton.addEventListener('click', () => {
+    reservationWrapper.style.display = "flex"
+
+
+    reservationClose.addEventListener('click', () => {
+        reservationWrapper.style.display = "none"
+    })
 })
+
+
 
